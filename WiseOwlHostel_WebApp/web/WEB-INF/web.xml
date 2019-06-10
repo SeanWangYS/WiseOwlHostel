@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>CharSetFilter</filter-name>
+        <filter-class>uuu.woh.web.CharSetFilter</filter-class>
+        <init-param>
+            <param-name>charset</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharSetFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CharSetFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>CaptchaServlet</servlet-name>
+        <servlet-class>uuu.woh.view.CaptchaServlet</servlet-class>
+        <init-param>
+            <param-name>len</param-name>
+            <param-value>4</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterCaptchaServlet</servlet-name>
+        <servlet-class>uuu.woh.view.CaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CaptchaServlet</servlet-name>
+        <url-pattern>/images/captcha.jepg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterCaptchaServlet</servlet-name>
+        <url-pattern>/images/register_captcha.jepg</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

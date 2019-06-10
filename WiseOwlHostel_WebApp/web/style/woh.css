@@ -1,0 +1,169 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019/3/20, 下午 01:53:35
+    Author     : Sean
+*/
+
+@charset "UTF-8";
+body{
+    margin:0px;
+    font-family: 'Gudea', sans-serif;
+    /*min-width: 1000px;*/
+}
+
+/*==========================header===================================*/
+.header-wrapper{
+    width:100%;
+}
+.header-wrapper .logo-wrapper{
+    margin:0px;
+    background-color: white;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight:bold;
+    color: black;
+}
+.header-wrapper .logo-wrapper .logo{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.header-wrapper .logo-wrapper .logo-content{
+       margin: 0 30px;
+}
+.header-wrapper .logo-wrapper .logo-content ul{
+    margin: 0px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 10px 0px;
+}
+.header-wrapper .logo-wrapper .logo-content ul li{
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+/*==========================navigator===================================*/
+.navigator{
+    background: hsl(208, 68%, 21%);
+    margin:0px;
+    width:100%;
+    margin-right: 80px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    height: 50px;
+    /*display: flex;*/
+    /*flex-direction:row;*/
+}
+.navigator .function{
+    margin: 0px 30px;
+    padding: 10px 0px;
+    list-style: none;
+    /*width: 400px;*/   
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;      
+    float: left; /*是不是因為這裡用了float所以寬度沒給也會排得好好*/
+    /*position:relative TODO排版問題  */ 
+}
+
+.navigator .member{
+    margin: 0px 30px;
+    padding: 10px 0px;
+    list-style: none;
+    /*    width: 25;*/
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;   
+    float: right; /*是不是因為這裡用了float所以寬度沒給也會排得好好*/
+}
+
+.navigator ul li{
+    margin:0px 0px;
+    padding:6px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.navigator ul li a{text-decoration: none;}
+.navigator ul li a:link{color: white;}
+.navigator ul li a:visited{color: white;}
+.navigator ul li a:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+#member-btn{color: white;}
+#member-btn:hover{
+    color: yellow;
+    text-decoration: none;
+}
+/*==================================================*/
+
+#membership{
+    background: white;
+    width: 150px;
+    margin: 0px;
+    position: absolute;
+    right: -25px;
+    top: 52px;
+    z-index: 10;
+    border: 1px gray solid;
+    border-bottom: 2px #337ab7 solid;
+    border-top: 2px #337ab7 solid;
+    display: none;
+}
+
+#membership .member-function{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-align: left;
+
+}
+
+#membership .member-function li{
+    height:22px;
+    margin: 10px;
+}
+
+#membership .member-function li a{text-decoration: none;}
+#membership .member-function li a:link{color: #337ab7;}
+#membership .member-function li a:visited{color: #337ab7;}
+/*=====================page-title=========================*/
+.page-title-wrapper{
+    width:100%;
+    min-width: 1000px;
+    height: 160px;
+    text-align: center;
+    background-position: center;
+}
+.page-title-wrapper .page-title-wrapper-container .page-title{
+    margin:0px;
+    position:relative;
+    top:60px;
+}
+/*=====================footer=========================*/
+
+
+.footer-wrapper .footer-content{
+    width: 100%;
+    background: hsl(208, 68%, 21%);
+    text-align: center;
+}
+.footer-wrapper .footer-content p{
+    margin:0px;
+    padding: 18px 0px;
+    color: white;
+    font-size: 1em;
+}
+
+
